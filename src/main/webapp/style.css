@@ -1,0 +1,23 @@
+.result-container {
+    margin-top: 1em;
+}
+.result-container > div {
+    display: inline-block;
+}
+
+.result-container > div > div {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.result-container > div > div > input {
+    max-width: 5em;
+}
+
+.result-container > div> div > span {
+    padding-right: 5px;
+}
+
+.result-container > div> div > select {
+    min-width: 3em;
+}
