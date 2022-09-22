@@ -17,7 +17,7 @@ public class Task4 extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.sendRedirect(req.getContextPath() + "/task4.jsp");
+        resp.sendRedirect(req.getContextPath() + "/templates/jsp//task4.jsp");
     }
 
     @Override
@@ -60,12 +60,12 @@ public class Task4 extends HttpServlet {
             session.setAttribute("vowelsNumber", vowelsNumber);
             session.setAttribute("consonantsNumber", consonantsNumber);
             session.setAttribute("punctuationMarksNumber", punctuationMarksNumber);
-            resp.sendRedirect(req.getContextPath() + "/task4.jsp");
+            resp.sendRedirect(req.getContextPath() + "/templates/jsp//task4.jsp");
         } catch (RuntimeException e) {
             // перенаправление запроса на страницу с ошибкой
             ServletContext sContext = getServletContext();
             RequestDispatcher rDispatcher =
-                    sContext.getRequestDispatcher("/ErrorServlet");
+                    sContext.getRequestDispatcher("/templates/jsp//ErrorServlet");
             rDispatcher.forward(req, resp);
         }
     }

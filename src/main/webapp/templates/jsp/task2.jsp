@@ -9,12 +9,12 @@
 <html>
 <head>
     <title>Task2-3</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="input-validation.js"></script>
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/templates/css/style.css">
+    <script src="${pageContext.request.contextPath}/templates/scripts/input-validation.js"></script>
 </head>
 <body>
-<h1>Task2-3</h1>
-<form action="task2-servlet" method="post">
+<h2>Task2-3</h2>
+<form action="${pageContext.request.contextPath}/task2-servlet" method="post">
     <input type="text" name="number1" class="input-number" value="${number1}">
     <input type="text" name="number2" class="input-number" value="${number2}">
     <input type="text" name="number3" class="input-number" value="${number3}">
@@ -27,5 +27,6 @@
         </div>
     </div>
 </form>
+<jsp:include page="footer.jsp"/>
 </body>
 </html>

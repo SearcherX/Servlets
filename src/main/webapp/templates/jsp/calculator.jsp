@@ -9,11 +9,12 @@
 <html>
 <head>
     <title>Calculator</title>
-    <script src="input-validation.js"></script>
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/templates/css/style.css">
+    <script src="${pageContext.request.contextPath}/templates/scripts/input-validation.js"></script>
 </head>
 <body>
 <h2>Calculator</h2>
-<form action="calculator-servlet" method="post">
+<form action="${pageContext.request.contextPath}/calculator-servlet" method="post">
     <input type="text" name="number1" class="input-number" value="${number1}">
     <select name="select-operation">
         <option value="+">+</option>
@@ -25,6 +26,10 @@
     =
     <input type="text" name="result" disabled value="${result}">
     <button>Calculate</button>
+    <script>
+        document.querySelector("option[value='${op}']").selected = true;
+    </script>
 </form>
+<jsp:include page="footer.jsp"/>
 </body>
 </html>

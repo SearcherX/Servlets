@@ -15,7 +15,7 @@ import java.io.IOException;
 public class Task2 extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.sendRedirect(request.getContextPath() + "/task2.jsp");
+        response.sendRedirect(request.getContextPath() + "/templates/jsp//task2.jsp");
     }
 
     @Override
@@ -37,12 +37,12 @@ public class Task2 extends HttpServlet {
             session.setAttribute("number2", number2);
             session.setAttribute("number3", number3);
 
-            resp.sendRedirect(req.getContextPath() + "/task2.jsp");
+            resp.sendRedirect(req.getContextPath() + "/templates/jsp//task2.jsp");
         } catch (RuntimeException e) {
             // перенаправление запроса на страницу с ошибкой
             ServletContext sContext = getServletContext();
             RequestDispatcher rDispatcher =
-                    sContext.getRequestDispatcher("/ErrorServlet");
+                    sContext.getRequestDispatcher("/templates/jsp//ErrorServlet");
             rDispatcher.forward(req, resp);
         }
     }

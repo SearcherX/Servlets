@@ -16,7 +16,7 @@ public class Calculator extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.sendRedirect(request.getContextPath() + "/calculator.jsp");
+        response.sendRedirect(request.getContextPath() + "/templates/jsp/calculator.jsp");
     }
 
     @Override
@@ -39,9 +39,10 @@ public class Calculator extends HttpServlet {
             HttpSession session = req.getSession();
             session.setAttribute("result", result);
             session.setAttribute("number1", number1);
+            session.setAttribute("op", op);
             session.setAttribute("number2", number2);
 
-            resp.sendRedirect(req.getContextPath() + "/calculator.jsp");
+            resp.sendRedirect(req.getContextPath() + "/templates/jsp/calculator.jsp");
         } catch (RuntimeException e) {
             // перенаправление запроса на страницу с ошибкой
             ServletContext sContext = getServletContext();

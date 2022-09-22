@@ -11,6 +11,7 @@
     <title>Error</title>
 </head>
 <body>
-<h1>An error occurred during application running</h1>
+<h2>An error occurred during application running</h2>
+<jsp:include page="footer.jsp"/>
 </body>
 </html>

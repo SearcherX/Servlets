@@ -1,5 +1,4 @@
-<%@ page import="java.util.Arrays" %>
-<%@ page import="java.util.HashSet" %><%--
+<%--
   Created by IntelliJ IDEA.
   User: Searcher
   Date: 20.09.2022
@@ -11,11 +10,11 @@
 <html>
 <head>
     <title>Task4</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/templates/css/style.css">
 </head>
 <body>
-<h1>Text analysis</h1>
-<form action="task4-servlet" method="post">
+<h2>Text analysis</h2>
+<form action="${pageContext.request.contextPath}/task4-servlet" method="post">
     Введите текст:<input type="text" name="txt" value="${txt}">
     <button>Submit</button>
     <div class="result-container">
@@ -56,5 +55,6 @@
         </div>
     </div>
 </form>
+<jsp:include page="footer.jsp"/>
 </body>
 </html>

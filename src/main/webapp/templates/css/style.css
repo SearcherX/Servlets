@@ -1,3 +1,32 @@
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #fbf2e9;
+}
+
+button {
+    font-size: inherit;
+}
+
+q {
+    display: block;
+    margin-top: 1em;
+}
+
+.hide {
+    display: none;
+}
+
 .result-container {
     margin-top: 1em;
 }
@@ -8,6 +37,7 @@
 .result-container > div > div {
     display: flex;
     justify-content: flex-end;
+    align-items: baseline;
 }
 
 .result-container > div > div > input {
